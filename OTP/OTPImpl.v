@@ -1,6 +1,4 @@
-Add LoadPath "/home/paven/Type_Theory/Coq/HoTT/Crypto".
-
-Require Import PathUtils.
+Require Import Crypto.PathUtils.
 Require Import Vector.
 Require Import OTPSpace.
 
@@ -178,4 +176,23 @@ Definition OTPpath {n} (key : vec Bit n) : (vec Bit n ≡ vec Bit n)
   match univalence with
   | (BuildΣe _ eq) => IsEquiv_g eq (OTPequiv key)
   end.
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

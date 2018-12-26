@@ -1,6 +1,4 @@
-Add LoadPath "/home/paven/Type_Theory/Coq/HoTT/Crypto".
-
-Require Import PathUtils.
+Require Import Crypto.PathUtils.
 Require Import Vector.
 
 Module Export OTP.
