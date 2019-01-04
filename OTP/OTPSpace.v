@@ -1,4 +1,4 @@
-Require Import Crypto.PathUtils.
+Require Import PathUtils.
 Require Import Vector.
 
 Module Export OTP.

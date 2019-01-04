@@ -117,3 +117,14 @@ Definition coe {A B : Type} (path : A ≡ B) : A -> B
 
 Axiom ua_cbj : forall {A B : Type} (eq : equiv A B), (coe_biject (ua eq)) ≡ eq.
 
+Inductive Singleton {A : Type} (x : A) : Type :=
+  _with_ : forall (y : A), x ≡ y -> Singleton x.
+  Arguments _with_ [A] [x].
+
+Definition to_Singleton {A B : Type} {a : A} (f : A -> B) : Singleton a -> Singleton (f a)
+  := fun input => match input with
+                  | (_with_ x p) => (_with_ (f x) (ap f p))
+                  end.
+
+Axiom singleton_equiv : forall {A B : Type} {f : A -> B} {m : A}, 
+        (Singleton m -> Singleton (f m)) -> (equiv (Singleton m) (Singleton (f m))).

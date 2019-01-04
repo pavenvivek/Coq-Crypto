@@ -1,4 +1,4 @@
-Require Import Crypto.PathUtils.
+Require Import PathUtils.
 Require Import Vector.
 Require Import OTPSpace.
 
@@ -176,4 +176,23 @@ Definition OTPpath {n} (key : vec Bit n) : (vec Bit n ≡ vec Bit n)
   match univalence with
   | (BuildΣe _ eq) => IsEquiv_g eq (OTPequiv key)
   end.
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
